@@ -10,7 +10,27 @@ def solution(A, B):
             return length
     return 0
 
-def main():
-    print(solution(29,10))
+def spinWord(sentence):
+    sentenceList = sentence.split()
+    print(sentenceList)
+    newString = ""
+    reversedWord = ""
+    for word in sentenceList:
+        print("Word: ", word)
+        if len(word) >= 5:
+            reversedWord = word[::-1]
+            newString += reversedWord + " "
+        else:
+            newString += word + " "
+    return newString.strip()
 
-main()
+if __name__ == "__main__":
+    # print(solution(29,10))
+    # word = "Welcome"
+    # newWord = spinWord("Hey fellow warriors")
+    # print(newWord)
+    s = "Hello world"
+    print(len(s.split().pop()))
+
+
+
